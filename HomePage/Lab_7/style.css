@@ -12,6 +12,15 @@ body {
     line-height: 1.6;
 }
 
+/* Centered Body Layout for Authentication Pages (Login/Register) */
+body.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
 /* Container Wrapper */
 .container {
     max-width: 1200px;
@@ -139,4 +148,62 @@ body {
     padding: 5px 12px;
     border-radius: 6px;
     font-weight: 500;
+}
+
+/* ==========================================
+   Login & Registration Card Styles
+   ========================================== */
+
+.register-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.register-card h2 {
+    margin-bottom: 24px;
+    font-weight: normal;
+    color: #333333;
+    text-transform: lowercase;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #28a745;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.register-btn:hover {
+    background-color: #5a6268;
 }
