@@ -11,9 +11,17 @@ logging.basicConfig(
     format="%(asctime)s - %(message)s"
 )
 
-@app.route("/")
+@app.route("/register")
 def home():
     return send_from_directory(".", "register.html")
+
+@app.route("/styles.css")
+def styles():
+    return send_from_directory(".", "styles.css")
+
+@app.route("/login-styles.css")
+def login_styles():
+    return send_from_directory(".", "login-styles.css")
 
 @app.route("/login")
 def login_page():
