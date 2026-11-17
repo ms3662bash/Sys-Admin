@@ -27,7 +27,7 @@ loginForm.addEventListener("submit", async function(event) {
 
     try {
         // STEP 3: Uses fetch() to send a POST request containing the username and password 
-        // as a JSON string over the network to Team Member 2's backend API[cite: 1]
+        // as a JSON string over the network to Team Member 2's backend API
         const response = await fetch(BACKEND_URL, {
             method: "POST",
             headers: {
@@ -42,7 +42,7 @@ loginForm.addEventListener("submit", async function(event) {
         // Checks if the HTTP response code is successful (200-299) AND the server JSON says success: true
         if (response.ok && data.success) {
             
-            // STEP 4 (SUCCESS): Updates the UI message box to green text letting the user know it worked[cite: 1]
+            // STEP 4 (SUCCESS): Updates the UI message box to green text letting the user know it worked
             messageDiv.textContent = "Login successful! Redirecting...";
             messageDiv.style.color = "#5cb85c"; // Green color
             
@@ -58,7 +58,7 @@ loginForm.addEventListener("submit", async function(event) {
 
         } else {
             // STEP 5 (SERVER ERROR/BAD CREDENTIALS): If the username or password was wrong, 
-            // display the error message sent by the server in red text[cite: 1]
+            // display the error message sent by the server in red text
             messageDiv.textContent = data.error || "Invalid credentials.";
             messageDiv.style.color = "#d9534f"; // Red color
         }
