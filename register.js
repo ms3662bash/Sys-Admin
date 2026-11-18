@@ -10,6 +10,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     registerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+        // Cleared previous messages
+        messageContainer.textContent = '';
+        messageContainer.style.color = '';
+        // extract input values
+        const usernameInput = registerForm.querySelector('input[name="username"]')
+        const emailInput = registerForm.querySelector('input[name="email"]');
+        const passwordInput = registerForm.querySelector('input[name="password"]');
+
+        const username = usernameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+        //==============================================
+        //Password validation rules
+        //===============================================
+        if (!username || !email || !password){
+            showError('All fields are required.');
+            return;
+        }
+        //email format verification
+        //===========================
+        const emailRule = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRule.test(email)){
+            showError('Please enter a valid email address.');
+            return;
+        }
+    //======================================================================
+        const passwordRule = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{10,30}$/;
+        if (!passwordRule.test(password)) {
+                showError('Password must be 10-30 characters long and include at least one lower and upper case letter, one number, and one special character.');
+                return;
+            }
+        
 
         // ... (your existing validation code) ...
 
