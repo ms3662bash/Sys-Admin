@@ -1,0 +1,209 @@
+/* Global Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+/* Centered Body Layout for Authentication Pages (Login/Register) */
+body.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Wrapper */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Navigation */
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #1a202c;
+    font-weight: 700;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    color: #4a5568;
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.site-header nav a:hover, 
+.site-header nav a.active {
+    color: #2f855a;
+}
+
+/* Search Bar Section */
+.search-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 650px;
+    padding: 14px 20px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.01);
+}
+
+#searchInput:focus {
+    border-color: #2f855a;
+    box-shadow: 0 0 0 3px rgba(47, 133, 90, 0.15);
+}
+
+/* Cards Grid Layout */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    padding-bottom: 60px;
+}
+
+/* Individual Card Styling */
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    color: #2f855a;
+}
+
+.card h3 {
+    font-size: 1.15rem;
+    color: #1a202c;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 0.92rem;
+    color: #718096;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+/* Card Tags */
+.card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #edf2f7;
+    color: #4a5568;
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   Login & Registration Card Styles
+   ========================================== */
+
+.register-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.register-card h2 {
+    margin-bottom: 24px;
+    font-weight: normal;
+    color: #333333;
+    text-transform: lowercase;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #28a745;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.register-btn:hover {
+    background-color: #5a6268;
+}
